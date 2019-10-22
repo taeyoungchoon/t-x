@@ -1,0 +1,14 @@
+* list
+
+- using devstack
+- using Juju Charms
+- using Ansible in Docker Containers (kolla)
+- using OpenStack-Ansible
+- using TripleO, Train use only this?
+- using using using
+- Ussuri using Chef
+
+* test using
+
+- keystone
+- glance

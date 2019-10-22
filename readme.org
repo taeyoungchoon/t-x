@@ -1,0 +1,20 @@
+* such as
+
+- mon status healthcheck
+- nmap
+- tcpdump
+- cfg
+- os
+- os/df os/cpu os/mem os/disk
+- lvm
+- openvswitch
+- openstack/devstack openstack/ironic openstack/keystone
+- runsh
+- sec
+- net net/ip net/bond net/vlan net/ovs
+- xm xm/docker xm/lxc docker lxc
+- vm vm/kvm vm/virtualbox
+- switch 
+- sdn
+- nfv
+- ping serviceping

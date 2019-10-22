@@ -1,0 +1,6 @@
+* cli
+
+- pvs
+- vgs
+- lvs
+- and then mounted

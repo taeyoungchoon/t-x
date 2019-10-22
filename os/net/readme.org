@@ -1,0 +1,22 @@
+* list up
+
+- interface
+- bond and type(lacp)
+- combined with vlan(tagging)
+
+* cfg
+
+- ip 
+- netmask
+- routing table
+- default gateway
+- ping google(8.8.8.8)
+
+* bridge
+
+- brctl
+- bridge
+
+* soft switch
+
+- ovs-vsctl x

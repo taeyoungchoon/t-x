@@ -1,0 +1,6 @@
+* process
+
+- some m such as virtualbox using vagrant
+- conn to it, m
+- on m do devstack
+- and network? default

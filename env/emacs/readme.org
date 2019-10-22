@@ -1,0 +1,7 @@
+* so
+
+- init.el
+
+* with
+
+- 3bulsik
