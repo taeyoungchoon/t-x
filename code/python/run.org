@@ -1,0 +1,177 @@
+* DONE run from org-mode
+
+- BEGIN_SRC python :results output
+  - refer: https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-python.html
+- init.el
+  (setq org-babel-python-command "python3")
+
+* DONE hello, world
+
+#+BEGIN_SRC python :results output
+  print "hello, world!"
+#+END_SRC
+
+#+RESULTS:
+: hello, world!
+
+* DONE os.path.isdir os.removedirs os.makedirs
+
+#+BEGIN_SRC python :results output
+  import os
+  import os.path
+
+  if os.path.isdir('foobar') is True:
+      print("removing")
+      os.removedirs('foobar')
+  else:
+      print("making")
+      os.makedirs('foobar')
+#+END_SRC
+
+#+RESULTS:
+: removing
+* TODO matplotlib and numpy
+* DONE subprocess uptime split
+
+#+BEGIN_SRC python :results output
+  import subprocess
+
+  out = subprocess.getoutput("uptime").split(' ')
+  print(out)
+  print(out[len(out)-3:len(out)])
+
+  out = subprocess.getoutput("uname -a").split(' ')
+  print("arch: " + out[-1])
+#+END_SRC
+
+#+RESULTS:
+: ['15:47', '', 'up', '', '6:54,', '3', 'users,', 'load', 'averages:', '1.18', '1.22', '1.39']
+: ['1.18', '1.22', '1.39']
+: arch: x86_64
+* TODO venv
+* DONE argv
+
+#+BEGIN_SRC python :results output
+  import sys
+
+  print(str(sys.argv))
+  print("number of arguments: ", len(sys.argv))
+  print("name of the script: " + sys.argv[0])
+
+#+END_SRC
+
+#+RESULTS:
+: ['']
+: number of arguments:  1
+: name of the script: 
+* TODO module
+* TODO math
+
+#+BEGIN_SRC python :results output
+print(3+3)
+#+END_SRC
+
+#+RESULTS:
+: 6
+* TODO pass
+* TODO return
+* TODO browser
+* TODO nmap
+* DONE color
+
+#+BEGIN_SRC python :results output
+  from termcolor import colored, cprint
+
+  cprint('Info: This is info level color.', 'green')
+  print(colored('Warn: ', 'yellow'), 'This is warning color.')
+  cprint('Error: This is error level color.', 'red')
+#+END_SRC
+
+#+RESULTS:
+: Info: This is info level color.
+: [33mWarn: [0m This is warning color.
+: [31mError: This is error level color.[0m
+
+* TODO subprocess Popen
+* DONE subprocess getstatusoutput
+
+#+BEGIN_SRC python :results output
+import subprocess
+
+(status, output) = subprocess.getstatusoutput('date +%Y%m%d.%H%M%S')
+print("status: %d, output: %s" % (status, output))
+
+values = subprocess.getstatusoutput('date +%Y%m%d.%H%M%S')
+print("status: {}, output: {}".format(values[0], values[1]))
+#+END_SRC
+
+#+RESULTS:
+: status: 0, output: 20191025.202752
+: status: 0, output: 20191025.202752
+
+* TODO scapy ping
+* TODO icmp ping socket
+* TODO argparse
+* TODO expect
+* TODO ssh
+* TODO True False None
+* TODO pyperclip
+* TODO re
+* DONE list range type sort reverse set
+
+#+BEGIN_SRC python :results output
+  lt = [1, 2, 3]
+  print(type(lt))
+  for i in lt:
+      print(type(i))
+      break
+  lt2 = [x for x in range(3)]
+  lt3 = lt + lt2
+  print(len(lt3))
+  print(lt3)
+  lt3.sort(reverse=True)
+  print(lt3)
+  print(set(lt3))
+#+END_SRC
+
+#+RESULTS:
+: <class 'list'>
+: <class 'int'>
+: 6
+: [1, 2, 3, 0, 1, 2]
+: [3, 2, 2, 1, 1, 0]
+: {0, 1, 2, 3}
+
+* dictionary
+* tuple
+* set
+* os
+* os.path
+* sys
+* requests
+* bs4
+* DONE format
+
+#+BEGIN_SRC python :results output
+  out = '{0} {1} {2:.2f} {3}'.format(1, 2, 3.14159, 'hello')
+  print(out)
+#+END_SRC
+
+#+RESULTS:
+: 1 2 3.14 hello
+* DONE round floor ceil
+
+#+BEGIN_SRC python :results output
+  print("round '3.4': ", round(3.4))
+  print("round '3.6': ", round(3.6))
+
+  import math
+  print("ceil '3.5': ", math.ceil(3.5))
+  print("floor '3.5': ", math.floor(3.5))
+
+  from math import *
+  print("ceil '3.5': ", ceil(3.5))
+  print("floor '3.5': ", floor(3.5))
+#+END_SRC
+* TODO with raspberry pi
+* TODO with arduino
