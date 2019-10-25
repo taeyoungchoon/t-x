@@ -1,0 +1,21 @@
+* TODO with org-mode but emacs-lisp only, yet
+
+#+BEGIN_SRC emacs-lisp
+(cons t nil)
+(cons 1 (cons 2 (cons 3 nil)))
+(setf *lt* '(1 2 3))
+(cons 0 *lt*)
+(loop for i from 1 to 3 collect i)
+;; (loop for i in *lt* do (print i)
+(if t 1 2)
+(if nil 1 2)
+(when t 1 2)
+(car *lt*)
+(cdr *lt*)
+(cond (1 2)(3 4))
+(list (cons "love" "me") (cons "hate" "you"))
+#+END_SRC
+
+#+RESULTS:
+: ((love . me) (hate . you))
+
