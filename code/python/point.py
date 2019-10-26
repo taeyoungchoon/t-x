@@ -7,6 +7,7 @@ class Point:
     def hello(self):
         print("hello, ", self.name)
 
+        
 dot1 = Point('tom', 1, 2)
 dot2 = Point('huck')
 

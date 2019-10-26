@@ -4,6 +4,7 @@
   - refer: https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-python.html
 - init.el
   (setq org-babel-python-command "python3")
+- no org-babel-execute for python on windows emacs
 
 * DONE hello, world
 
@@ -14,11 +15,14 @@
 #+RESULTS:
 : hello, world!
 
-* DONE os.path.isdir os.removedirs os.makedirs
+* DONE os.path.isdir os.removedirs os.makedirs os.getcwd os.listdir
 
 #+BEGIN_SRC python :results output
   import os
   import os.path
+
+  print(os.getcwd())
+  print(os.listdir())
 
   if os.path.isdir('foobar') is True:
       print("removing")
@@ -111,11 +115,13 @@
 * DONE math
 
 #+BEGIN_SRC python :results output
-print(3+3)
+  print('plus: {}'.format(3 + 2))
+  print('minus: {}'.format(3 - 1))
 #+END_SRC
 
 #+RESULTS:
-: 6
+: plus: 5
+: minus: 2
 * TODO pass
 * TODO return
 * TODO browser
