@@ -1,0 +1,8 @@
+
+rm -rf openshift.local.clusterup
+
+$ for i in $(mount | grep openshift | awk '{ print $3}'); do sudo umount "$i"; done && sudo rm -rf ./openshift.local.clusterup
+
+oc cluster up --public-hostname=<IP or hostname>
+
+go to http://<IP or hostname>:8443/console
