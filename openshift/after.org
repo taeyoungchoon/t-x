@@ -1,0 +1,33 @@
+#+BEGIN_SRC 
+oc cluster up --public-hostname=192.168.25.153
+oc cluster status
+oc login -u system:admin
+oc whoami
+oc get nodes
+oc get nodes -o wide
+oc describe node localhost
+oc status
+
+oc login -u developer:developer
+oc whoami
+
+oc new-project dev --display-name="Project1 - Dev" --description="My Dev Project"
+
+echo https://<IP|Hostname>:8443/console
+
+oc cluster down
+cat ./openshift.local.clusterup/openshift-controller-manager/openshift-master.kubeconfig | grep server
+oc cluster up
+
+oc new-project test-project
+oc tag --source=docker openshift/deployment-example:v2 deployment-example:latest
+oc new-app deployment-example
+oc status
+oc get svc
+oc describe svc deployment-example
+curl http://172.30.15.201:8080
+oc get pods
+oc expose service/deployment-example
+oc delete all -l app=deployment-example
+oc get pods
+#+END_SRC
