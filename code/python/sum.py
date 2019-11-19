@@ -2,11 +2,7 @@
 
 max = 100
 
-"""
-sum of number
-and slow
-"""
-
+# sum of number and slow
 sum = 0
 for num in range(1, max + 1):
     sum = sum + num
@@ -14,10 +10,7 @@ for num in range(1, max + 1):
 print(type(sum))
 print(sum)
 
-"""
-cons half
-and fast
-"""
+# cons half and fast
 
 sum = 0
 half = max / 2
