@@ -8,18 +8,15 @@ import random
 # init
 numbers = []
 lotto = []
-max = 45
+limit = 45
 loop = 6
-for i in range(1, max + 1):
-    numbers.append(i)
+numbers = [i for i in range(1, limit + 1)]
 
 # loop 6 times
 for i in range(loop):
-    length = len(numbers)
-    idx = random.randint(1, length) - 1
-    pick = numbers[idx]
-    numbers.remove(pick)
+    pick = random.choice(numbers)
     lotto.append(pick)
+    numbers.remove(pick)
 
 # finally
 lotto.sort()
