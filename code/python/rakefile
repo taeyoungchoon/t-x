@@ -1,0 +1,27 @@
+require 'fileutils'
+
+task :default => [:check]
+
+desc 'clean files'
+task :clean do 
+  sh %{ls *.pyc} do |ok, res|
+    if ok
+      puts "something to do"
+      sh "rm *.pyc"
+    else
+      puts "nothing to do with (status = #{res.exitstatus})"
+    end
+  end
+
+end
+
+desc 'check files'
+task :check do 
+  sh %{ls *.pyc} do |ok, res|
+    if ok
+      puts "something to do"
+    else
+      puts "nothing to do with (status = #{res.exitstatus})"
+    end
+  end
+end

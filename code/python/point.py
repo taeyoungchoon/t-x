@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 class Point:
     def __init__(self, name, x = 0, y = 0):
         self.name = name
