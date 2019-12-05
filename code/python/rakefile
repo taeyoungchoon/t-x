@@ -4,10 +4,10 @@ task :default => [:check]
 
 desc 'clean files'
 task :clean do 
-  sh %{ls *.pyc} do |ok, res|
+  sh %{ls *~} do |ok, res|
     if ok
       puts "something to do"
-      sh "rm *.pyc"
+      sh "rm *~"
     else
       puts "nothing to do with (status = #{res.exitstatus})"
     end
@@ -17,7 +17,7 @@ end
 
 desc 'check files'
 task :check do 
-  sh %{ls *.pyc} do |ok, res|
+  sh %{ls *~} do |ok, res|
     if ok
       puts "something to do"
     else
